@@ -91,9 +91,33 @@
 
 .animate-feature-in {
   /* TODO: Create animation for adding a feature */
-  
+  --diffX: 0;
+  --diffY: 0;
+  animation: feature-in 2s ;
+}
+
+@keyframes feature-in{
+  0% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .animate-feature-out {
   /* TODO: Create animation for removing a feature */
+  --diffX: 0;
+  --diffY: 0;
+  animation: feature-out 2s ;
+}
+
+@keyframes feature-out{
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
 }
